@@ -1,0 +1,55 @@
+@import "../../../../styles";
+
+.head {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  border-bottom: 1px solid $gray;
+
+  .logo {
+    img {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      z-index: 1000;
+    }
+  }
+
+  .filter {
+    position: absolute;
+    top: 0;
+    background: $filter-logo;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    opacity: 0.85;
+    filter: blur(7px);
+  }
+
+  .menu {
+    float: right;
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding-top: 14px;
+      li {
+        padding: 0 15px;
+        border-left: 1px solid $gray-border;
+        &:last-child {
+          border-right: 1px solid $gray-border;
+        }
+        a {
+          color: $black-text;
+          transition: all .3s ease;
+          &:hover {
+            color: $accent-yellow;
+            transition: all .3s ease;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+
+}
