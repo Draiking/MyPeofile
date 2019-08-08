@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+    isVisible = false;
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
 
+    ngOnInit() {
+
+    }
+
+    private toggleFilterOpen(openFilter: boolean) {
+        this.isVisible = openFilter;
+    }
+
+    openFilter() {
+        this.toggleFilterOpen(true);
+    }
+
+    closeModal() {
+        this.toggleFilterOpen(false);
+    }
 }
+
+
+

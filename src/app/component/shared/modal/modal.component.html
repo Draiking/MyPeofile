@@ -1,0 +1,33 @@
+<div class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Резюме</h4>
+            </div>
+            <div class="modal-body">
+                <p>Для связи со мной, вы можете мне написать на gmail.com </p>
+                <div class="mail d-flex">
+                    <ul>
+                        <li>
+                            <h5 #myMail><a #myMail href="mailto:heavyyrain3039@gmail.com">heavyyrain3039@gmail.com</a> </h5>
+                        </li>
+                    </ul>
+                    <div class="copy-email"><button class="btn btn-primary" (click)="copyText(myMail)">Copy</button></div>
+                </div>
+                <p>Или написать на WhatsApp по номеру</p>
+                <div class="phone d-flex">
+                    <ul>
+                        <li>
+                            <h5>+7(909)44-88-311</h5>
+                        </li>
+                    </ul>
+                    <div class="copy-phone"><button class="btn btn-primary">Copy</button></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="onCloseModal()">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+

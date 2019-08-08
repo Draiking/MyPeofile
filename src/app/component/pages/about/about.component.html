@@ -1,3 +1,48 @@
-<p>
-  about works!
-</p>
+<section class="about-pages">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="about-me">
+                    <h1>Я Геннадий Мурадян <span class="touch">.</span></h1>
+                    <p>
+                        Я начинающий веб-разработчик, проживающий в Краснодарском крае. В настоящее время, я ищу работу
+                        для большего получения опыта и повысить свои навыки в разработке.
+                    </p>
+                    <div class="connection justify-content-end">
+                        <div class="phone d-flex">
+                            <h6 class="mr-auto">Телефон:</h6>
+                            <span>+7(909)-44-88-311</span>
+                        </div>
+                        <div class="mail d-flex">
+                            <h6 class="mr-auto">Почта:</h6>
+                            <span>heavyyrain3039@gmail.com </span>
+                        </div>
+                        <div class="social d-flex">
+                            <h6 class="mr-auto">Соц.сети:</h6>
+                            <span>
+                                <a href="">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                             </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-modal">
+                    <button class="button-modal" (click)="openFilter()">Связаться со мной</button>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="photo-me" style="background-image: url('./assets/img/me.jpg')">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<ng-container *ngIf="isVisible">
+    <div [ngClass]="{'out': isVisible}"></div>
+    <app-modal
+    (closeModal)="closeModal()"
+    ></app-modal>
+</ng-container>
+
