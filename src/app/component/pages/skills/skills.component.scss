@@ -1,0 +1,42 @@
+@import "../../../../styles";
+
+.skills {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $gray;
+
+  .title-skill {
+    padding-bottom: 50px;
+    padding-right: 5px;
+    p{
+      font-family: 'Indie Flower', cursive;
+      color: $text-about;
+    }
+  }
+
+  .touch {
+    position: absolute;
+    color: $blue;
+  }
+
+  .side-left {
+    padding-left: 50px;
+  }
+
+  .web-develop {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    h5 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+      opacity: 0.8;
+      font-style: italic;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      color: $text-about;
+    }
+  }
+
+
+}
