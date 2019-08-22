@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 
 import {AboutModule} from './about/about.module';
@@ -14,7 +13,6 @@ import {SkillsModule} from './skills/skills.module';
         CommonModule
     ],
     exports: [
-        BrowserModule,
         AboutModule,
         ExperienceModule,
         SkillsModule,

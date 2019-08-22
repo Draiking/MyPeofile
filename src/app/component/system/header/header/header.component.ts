@@ -6,6 +6,7 @@ import {
     QueryList,
     ViewChild
 } from '@angular/core';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         }
     }
 
-    constructor() {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
@@ -36,18 +37,21 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
     searchSection(event, anchor) {
         event.preventDefault();
+        if (this.router.url === '/main') {
 
-        const cordY = document.getElementById(anchor).offsetTop;
+            const cordY = document.getElementById(anchor).offsetTop;
 
-        if (window.pageYOffset < cordY) {
-            for (let i = window.pageYOffset; i < cordY - 71; i += 1) {
-                window.scrollTo(0, i);
-            }
-        } else {
-            for (let i = window.pageYOffset; i > cordY - 71; i -= 1) {
-                window.scrollTo(0, i);
+            if (window.pageYOffset < cordY) {
+                for (let i = window.pageYOffset; i < cordY - 71; i += 1) {
+                    window.scrollTo(0, i);
+                }
+            } else {
+                for (let i = window.pageYOffset; i > cordY - 71; i -= 1) {
+                    window.scrollTo(0, i);
+                }
             }
         }
+
     }
 
     ngAfterViewInit() {

@@ -1,0 +1,83 @@
+@import "../../../styles";
+
+.wrapper {
+
+  .modal-content {
+    padding: 20px;
+  }
+
+
+  .modal-dialog {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -70%);
+  }
+
+
+  .modal-body {
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+
+  .login {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    h6 {
+      padding-right: 10px;
+      margin: 0;
+      align-self: flex-end;
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid gray;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .password {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    h6 {
+      padding-right: 10px;
+      margin: 0;
+      align-self: flex-end;
+    }
+    input {
+      border: none;
+      border-bottom: 1px solid gray;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .button-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prev {
+    display: inline-block;
+    a {
+      border: 1px solid $blue-a;
+      background: $accent-yellow;
+      padding: 10px;
+    }
+  }
+
+  .next {
+    display: inline-block;
+    a {
+      border: 1px solid $blue-a;
+      background: $accent-yellow;
+      padding: 10px;
+    }
+  }
+
+}

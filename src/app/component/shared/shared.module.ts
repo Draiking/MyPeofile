@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 
 import {ModalImgModule} from './modal-img/modal-img.module';
@@ -15,7 +14,6 @@ import {ModalModule} from './modal/modal.module';
         CommonModule,
     ],
     exports: [
-        BrowserModule,
         CardsModule,
         ModalImgModule,
         ModalModule
