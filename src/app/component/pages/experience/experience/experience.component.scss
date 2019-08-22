@@ -1,0 +1,28 @@
+@import "../../../../../styles";
+
+.experience {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $gray;
+
+  .touch {
+    position: absolute;
+    color: $blue;
+    p{
+      font-family: 'Indie Flower', cursive;
+      color: $text-about;
+    }
+  }
+
+  .experience-work {
+    h1{
+
+    }
+    p{
+      font-family: 'Indie Flower', cursive;
+      color: $text-about;
+    }
+  }
+
+
+}

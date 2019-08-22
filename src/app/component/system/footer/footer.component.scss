@@ -1,0 +1,15 @@
+@import "../../../../styles";
+
+.main-footer {
+  background-color: $gray-border;
+  padding: 10px 0;
+
+
+  .copyright {
+    p {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  }
+}

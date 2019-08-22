@@ -1,6 +1,6 @@
 import {
     AfterViewInit,
-    Component, ElementRef,
+    Component,
     EventEmitter,
     OnInit,
     Output,
@@ -14,8 +14,8 @@ import {
 })
 export class ModalComponent implements OnInit, AfterViewInit {
 
-    @ViewChild('bodyElement') body;
-    @ViewChild('myMail') myMail;
+    @ViewChild('bodyElement', {static: false}) body;
+    @ViewChild('myMail', {static: false}) myMail;
 
     @Output() closeModal = new EventEmitter();
 
@@ -42,7 +42,7 @@ export class ModalComponent implements OnInit, AfterViewInit {
     }
 
     copyTextToClipboard(text) {
-        const txtArea = document.createElement("textarea");
+        const txtArea = document.createElement('textarea');
         txtArea.id = 'txt';
         txtArea.style.position = 'fixed';
         txtArea.style.top = '0';

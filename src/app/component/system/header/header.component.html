@@ -1,4 +1,4 @@
-<header class="head">
+<header class="head" #head >
     <div class="container">
         <div class="row">
             <div class="col-xl-4">
@@ -9,21 +9,18 @@
             </div>
             <div class="col-xl-8">
                 <div class="menu">
-                    <ul class="d-flex align-items-center">
+                    <ul  class="d-flex align-items-center">
                         <li>
-                            <a href="#">Привет</a>
+                            <a #searchAnchor (click)="searchSection($event, 'about')" >Привет</a>
                         </li>
                         <li>
-                            <a href="#">Навыки</a>
+                            <a #searchAnchor (click)="searchSection($event, 'skill')" >Навыки</a>
                         </li>
                         <li>
-                            <a href="#">Портфолио</a>
+                            <a #searchAnchor (click)="searchSection($event, 'exp')" >Опыт</a>
                         </li>
                         <li>
-                            <a href="#">Связь</a>
-                        </li>
-                        <li>
-                            <a href="#">Еще</a>
+                            <a #searchAnchor (click)="searchSection($event, 'working')" >Работы</a>
                         </li>
                     </ul>
                 </div>
