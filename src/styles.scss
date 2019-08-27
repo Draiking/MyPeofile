@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "./variables";
-@import "./assets/commons/color";
+@import "styles/commons/variables";
+@import "styles/commons/color";
 
 
 
@@ -13,4 +13,8 @@ button {
 html, body {
   min-height: 100vh;
   height: 100%;
+}
+
+.flex {
+  display: flex;
 }

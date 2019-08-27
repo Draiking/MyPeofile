@@ -1,0 +1,47 @@
+{
+  "user": {
+    "login": "Admin",
+    "password": "Rfhfgtczy67"
+  },
+  "list": [
+    {
+      "id": 1,
+      "type": "Angular",
+      "title": "Angular"
+    },
+    {
+      "id": 2,
+      "type": "JavaScript",
+      "title": "JavaScript"
+    },
+    {
+      "id": 3,
+      "type": "all",
+      "title": "Показать все"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "type": "Angular",
+      "title":"Angular",
+      "subtitle": "ngFor",
+      "date": "10.07.2019  14:10:59"
+    },
+    {
+      "id": 2,
+      "type": "JavaScript",
+      "title": "JavaScript",
+      "subtitle": "JavaScript: if() else",
+      "date": "10.07.2019  14:10:59"
+    },
+    {
+      "id": 3,
+      "type": "Angular",
+      "title": "Angular from myAngular",
+      "subtitle": "[ngStyle], [ngClass]",
+      "date": "10.07.2019  14:10:59"
+    }
+  ]
+}
+

@@ -10,8 +10,12 @@
   .modal-dialog {
     position: fixed;
     left: 50%;
-    top: 30%;
-    transform: translate(-50%, -70%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-header {
+    justify-content: center;
   }
 
 
@@ -23,13 +27,7 @@
 
   .login {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 15px;
-    h6 {
-      padding-right: 10px;
-      margin: 0;
-      align-self: flex-end;
-    }
     input {
       border: none;
       border-bottom: 1px solid gray;
@@ -42,12 +40,6 @@
   .password {
     display: flex;
     align-self: flex-end;
-    justify-content: space-between;
-    h6 {
-      padding-right: 10px;
-      margin: 0;
-      align-self: flex-end;
-    }
     input {
       border: none;
       border-bottom: 1px solid gray;
@@ -59,24 +51,46 @@
 
   .button-link {
     display: flex;
-    justify-content: space-between;
   }
 
-  .prev {
-    display: inline-block;
+  .input {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     a {
       border: 1px solid $blue-a;
       background: $accent-yellow;
       padding: 10px;
+      width: 100%;
+      text-align: center;
+      transition: all .3s ease;
+      color: $black;
+      &:hover {
+        cursor: pointer;
+        transition: all .3s ease;
+        text-decoration: none;
+        background: darken($accent-yellow, 10%);
+      }
     }
   }
-
-  .next {
-    display: inline-block;
+  .output {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
     a {
       border: 1px solid $blue-a;
-      background: $accent-yellow;
+      background: $red;
       padding: 10px;
+      width: 100%;
+      text-align: center;
+      transition: all .3s ease;
+      color: $black;
+      &:hover {
+        cursor: pointer;
+        transition: all .3s ease;
+        text-decoration: none;
+        background: darken($red, 10%);
+      }
     }
   }
 

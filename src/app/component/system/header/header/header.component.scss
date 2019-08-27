@@ -9,9 +9,10 @@
   padding-bottom: 10px;
   background-color: white;
   border-bottom: 1px solid $gray;
+
   &.active-scroll {
     border: none;
-    box-shadow: 0 5px 10px rgba(37, 37, 37, 0.1) ;
+    box-shadow: 0 5px 10px rgba(37, 37, 37, 0.1);
   }
 
   .logo {
@@ -36,19 +37,24 @@
 
   .menu {
     float: right;
-    ul{
+
+    ul {
       list-style-type: none;
       margin: 0;
       padding-top: 14px;
+
       li {
         padding: 0 15px;
         border-left: 1px solid $gray-border;
+
         &:last-child {
           border-right: 1px solid $gray-border;
         }
+
         a {
           color: $black-text;
           transition: all .3s ease;
+
           &:hover {
             cursor: pointer;
             color: $accent-yellow;
@@ -60,5 +66,129 @@
     }
   }
 
+  .toggle-menu {
+    display: none;
+    float: left;
+    position: relative;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 48px;
+    width: 28px;
+    height: 28px;
+    padding-top: 20px;
+    z-index: 1050;
 
+    span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $black;
+      transition: all 0.3s;
+      backface-visibility: hidden;
+      border-radius: 2px;
+
+      &:after {
+        top: 9px;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $black;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -9px;
+        width: 100%;
+        height: 3px;
+        background-color: $black;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+      }
+    }
+
+    &.on {
+      span {
+        background-color: transparent;
+
+        &:before {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        &:after {
+          transform: rotate(-45deg) translate(7px, -8px);
+        }
+      }
+    }
+  }
+
+  .dBlock {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .head {
+    .menu {
+      display: none;
+    }
+    .toggle-menu {
+      display: block;
+      float: right;
+    }
+    .head-menu {
+      .menu {
+        display: none;
+        min-width: 295px;
+        float: right;
+        text-align: right;
+        background-color: #1c242c;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        z-index: 1000;
+
+        ul {
+          padding: 0;
+          display: block!important;
+        }
+
+        li {
+          display: block;
+          line-height: 0;
+          padding: 0;
+          border: white 1px solid;
+          text-align: left;
+
+        }
+
+        a {
+          display: block;
+          line-height: 48px;
+          padding: 0 20px;
+          background-color: #394b5f;
+          font-size: 18px;
+          transition: all .5s ease;
+          color: $white!important;
+
+
+          &:hover {
+            background-color: #1b2637;
+            transition: all .5s ease;
+          }
+        }
+      }
+    }
+
+
+  }
 }

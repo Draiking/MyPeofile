@@ -1,5 +1,6 @@
 .example-card {
   max-width: 400px;
+  margin-bottom: 15px;
 }
 
 .example-header-image {
@@ -7,6 +8,20 @@
   background-size: cover;
 }
 
-img {
-  height: 167px;
+.img {
+  height: 150px;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.mat-card-content {
+  padding-top: 15px;
+  font-family: "Indie Flower", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  .example-card {
+    left: 50%;
+    transform: translate(-50%)
+  }
 }

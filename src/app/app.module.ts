@@ -9,6 +9,7 @@ import {CommonModule} from '@angular/common';
 import {AppComponent} from './app.component';
 import {HeaderModule} from './component/system/header/header.module';
 import {FooterModule} from './component/system/footer/footer.module';
+import {AuthService} from './auth/auth.service';
 
 
 
@@ -29,7 +30,7 @@ import {FooterModule} from './component/system/footer/footer.module';
         RouterModule.forRoot(appRoutes)
     ],
     exports: [],
-    providers: [],
+    providers: [AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

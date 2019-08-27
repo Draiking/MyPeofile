@@ -1,0 +1,15 @@
+@import "~src/styles/commons/color";
+
+.flex {
+
+  small {
+    font-size: 13px;
+    color: $text-about;
+  }
+
+  .list-button {
+    &:hover {
+      background: darken($primary, 10%)
+    }
+  }
+}

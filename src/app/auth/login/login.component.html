@@ -2,26 +2,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header ">
-                <h4 class="modal-title">Вход в систему:</h4>
+                <h4 class="modal-title">Welcome</h4>
             </div>
             <div class="modal-body">
                 <div class="login">
-                    <h6>Ведите логин:</h6>
-                    <input type="text" [(ngModel)]="login" (ngModelChange)="loginChange($event)" >
+                    <input type="text" placeholder="Entry login" [(ngModel)]="login">
                 </div>
                 <div class="password">
-                    <h6>Ведите пароль:</h6>
-                    <input type="password"  [(ngModel)]="password" (ngModelChange)="passwordChange($event)">
+                    <input type="password" placeholder="Entry password" [(ngModel)]="password">
                 </div>
             </div>
-            <div class="button-link">
-                <div class="prev">
-                    <a [routerLink]="['/main']">Вернуть на главную</a>
-
-                </div>
-                <div class="next" (click)="send()">
-                    Войти в систему
-                </div>
+            <div class="input" (click)="send()">
+                <a>Войти в систему</a>
+            </div>
+            <div class="output" (click)="logout()">
+                <a>Выход из системы</a>
             </div>
         </div>
     </div>

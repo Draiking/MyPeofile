@@ -8,21 +8,25 @@
   .touch {
     position: absolute;
     color: $blue;
-    p{
-      font-family: 'Indie Flower', cursive;
-      color: $text-about;
-    }
   }
 
   .experience-work {
-    h1{
-
-    }
-    p{
+    p {
       font-family: 'Indie Flower', cursive;
       color: $text-about;
     }
   }
 
+  .skills-experience {
+    p {
+      font-family: 'Indie Flower', cursive;
+      color: $text-about;
+    }
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .experience {
+    text-align: center;
+  }
 }

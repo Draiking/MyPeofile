@@ -5,8 +5,10 @@
   padding-bottom: 30px;
   border-bottom: 1px solid $gray;
   margin-top: 71px;
-
   .about-me {
+    img {
+      display: none;
+    }
     h1 {
       padding-top: 10px;
       font-family: 'Roboto', sans-serif;
@@ -78,4 +80,40 @@
   opacity: 0.5;
 }
 
-
+@media only screen and(max-width:992px) {
+.about-pages {
+  .about-me {
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .connection {
+    .mr-auto {
+      font-size: 14px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}
+}
+@media only screen and(max-width:768px) {
+  .about-pages {
+    .about-me {
+      img {
+        display: block;
+        width: 200px;
+        height: 200px;
+      }
+      p {
+        padding-top: 15px;
+      }
+    }
+    .photo-me {
+      display: none;
+    }
+  }
+}

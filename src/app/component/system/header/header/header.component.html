@@ -1,36 +1,40 @@
-<header class="head" #head >
+<header class="head" #head>
     <div class="container">
         <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                 <div class="logo">
-                    <img src="https://img.icons8.com/clouds/100/000000/bookmark-ribbon.png">
+                    <a [routerLink]="['/main']"> <img
+                            src="https://img.icons8.com/clouds/100/000000/bookmark-ribbon.png"></a>
                     <div class="filter"></div>
                 </div>
             </div>
-            <div class="col-xl-8">
-                <div class="menu">
-                    <ul  class="d-flex align-items-center">
-                        <ng-container *ngIf="router.url === '/main'">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 ">
+                <div class="head-menu">
+                    <a class="toggle-menu" #toggleMenu (click)="VisibleMob()"><span></span></a>
+                    <div class="menu" #menu>
+                        <ul class="d-flex align-items-center">
+                            <ng-container *ngIf="router.url === '/main'">
+                                <li>
+                                    <a #searchAnchor (click)="searchSection($event, 'about')">Привет</a>
+                                </li>
+                                <li>
+                                    <a #searchAnchor (click)="searchSection($event, 'skill')">Навыки</a>
+                                </li>
+                                <li>
+                                    <a #searchAnchor (click)="searchSection($event, 'exp')">Опыт</a>
+                                </li>
+                                <li>
+                                    <a #searchAnchor (click)="searchSection($event, 'working')">Работы</a>
+                                </li>
+                            </ng-container>
                             <li>
-                                <a #searchAnchor (click)="searchSection($event, 'about')" >Привет</a>
+                                <a [routerLink]="['/blog']">Блог</a>
                             </li>
                             <li>
-                                <a #searchAnchor (click)="searchSection($event, 'skill')" >Навыки</a>
+                                <a [routerLink]="['/auth/login']">Авторизация</a>
                             </li>
-                            <li>
-                                <a #searchAnchor (click)="searchSection($event, 'exp')" >Опыт</a>
-                            </li>
-                            <li>
-                                <a #searchAnchor (click)="searchSection($event, 'working')" >Работы</a>
-                            </li>
-                        </ng-container>
-                        <li>
-                            <a [routerLink]="['/blog']" >Блог</a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/auth/login']">Логин</a>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

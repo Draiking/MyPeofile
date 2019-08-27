@@ -1,17 +1,16 @@
-<mat-card class="example-card" #matCard>
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{card.title}}</mat-card-title>
-    <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]="card.imgUrl"
-       alt="index">
-  <mat-card-content>
-    <p>
-      {{card.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="openDialog()" >Click me!</button>
-  </mat-card-actions>
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{card.title}}</mat-card-title>
+        <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="img" [style.background]="'url( '+card.imgUrl+')'"></div>
+    <mat-card-content>
+        <p>
+            {{card.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="openDialog()">Подробнее</button>
+    </mat-card-actions>
 </mat-card>

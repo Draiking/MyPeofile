@@ -1,1 +1,16 @@
-<p>block-list works!</p>
+<div class="flex">
+    <div class="container" *ngIf="posts && posts.length > 0">
+        <ng-container *ngFor="let post of posts | postsPipe:type">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="news">
+                        <small>({{post.date}})</small>
+                        <h3> {{post.title}} </h3>
+                        <p>{{post.subtitle}}</p>
+                        <button class="list-button" mat-raised-button color="primary" (click)="openPost(post)">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     @ViewChild('bodyElement', {static: false}) elScroll;
     @ViewChild('head', {static: false}) elhead: any;
     @ViewChild('searchAnchor', {static: false}) searchAnchor: QueryList<any>;
+    @ViewChild('toggleMenu', {static: false}) toggleMenu;
+    @ViewChild('menu', {static: false}) menu;
 
     @HostListener('window:scroll', [])
     onWindowScroll() {
@@ -32,15 +34,20 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     constructor(private router: Router) {
     }
 
+
     ngOnInit() {
+    }
+
+    VisibleMob() {
+        this.toggleMenu.nativeElement.classList.toggle('on');
+        this.menu.nativeElement.classList.toggle('dBlock');
+        console.log( this.toggleMenu);
     }
 
     searchSection(event, anchor) {
         event.preventDefault();
         if (this.router.url === '/main') {
-
             const cordY = document.getElementById(anchor).offsetTop;
-
             if (window.pageYOffset < cordY) {
                 for (let i = window.pageYOffset; i < cordY - 71; i += 1) {
                     window.scrollTo(0, i);

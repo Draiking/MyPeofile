@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from '../auth.service';
+import {UserService} from '../user.service';
 
 @Component({
     selector: 'app-login',
@@ -11,28 +13,31 @@ export class LoginComponent implements OnInit {
     login: string;
     password: string;
 
-    constructor(private router: Router) {
+    constructor(
+        private router: Router,
+        private userService: UserService
+    ) {
     }
 
     ngOnInit() {
     }
 
-    loginChange(value) {
 
-    }
-
-    passwordChange(value) {
-
-    }
-
-    send() {
-        if ( this.login.length <= 3 && this.password.length <= 6 && this.login !== 'Admin' && this.password !== 'Rfhfgtczy67') {
-            alert('Не правильный логин или пароль.');
-        } else  {
+    async send() {
+        const user = await this.userService.getUser(this.login, this.password);
+        if (user) {
             localStorage.setItem('login', this.login);
             localStorage.setItem('password', this.password);
-            this.router.navigateByUrl('/main');
+            this.router.navigate(['/admin']);
+        } else  {
+            alert('Не правильный логин или пароль.');
         }
+    }
+
+    logout() {
+        localStorage.removeItem('login');
+        localStorage.removeItem('password');
+        this.router.navigate(['/main']);
     }
 
 }

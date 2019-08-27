@@ -8,6 +8,17 @@
     display: flex;
     justify-content: center;
   }
+}
 
-
+@media only screen and (max-width: 768px) {
+  .working {
+    padding-bottom: 20px;
+    .wrapper-cards {
+      display: block;
+    }
+    .example-card{
+      left: 50%;
+      transform: translate(-50%)
+    }
+  }
 }

@@ -41,6 +41,11 @@ export class ModalComponent implements OnInit, AfterViewInit {
         this.copyTextToClipboard(text);
     }
 
+    copyNumber(num) {
+        const text = num.outerText;
+        this.copyTextToClipboard(text);
+    }
+
     copyTextToClipboard(text) {
         const txtArea = document.createElement('textarea');
         txtArea.id = 'txt';
@@ -54,12 +59,10 @@ export class ModalComponent implements OnInit, AfterViewInit {
         try {
             const successful = document.execCommand('copy');
             const msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copying text command was ' + msg);
             if (successful) {
                 return true;
             }
         } catch (err) {
-            console.log('Oops, unable to copy');
         } finally {
             document.body.removeChild(txtArea);
         }

@@ -19,19 +19,6 @@ export class CardsComponent implements OnInit {
     }
 
     ngOnInit() {
-        let maxHeight = 0;
-        const cardHeight = document.getElementsByClassName('example-card') as HTMLCollectionOf<any>;
-
-        for (let i = cardHeight.length - 1; i >= 0; i--) {
-            if (cardHeight[i].clientHeight > maxHeight) {
-                maxHeight = cardHeight[i].clientHeight;
-            }
-        }
-
-        for (let i = cardHeight.length - 1; i >= 0; i--) {
-            cardHeight[i].style.height = maxHeight;
-            console.log(maxHeight);
-        }
 
     }
 
@@ -46,9 +33,6 @@ export class CardsComponent implements OnInit {
         });
     }
 
-    maxHeight() {
-
-    }
 
 
 }

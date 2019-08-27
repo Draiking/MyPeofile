@@ -1,0 +1,10 @@
+@import "~src/styles/commons/color";
+.menu-blog {
+  a{
+    margin-top: 10px;
+    &:hover {
+      cursor: pointer;
+      color: $accent-yellow;
+    }
+  }
+}

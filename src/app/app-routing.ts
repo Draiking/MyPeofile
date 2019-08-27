@@ -18,6 +18,10 @@ export const appRoutes: Routes = [
     {
         path: 'blog',
         loadChildren: './blog/blog.module#BlogModule'
+    },
+    {
+        path: 'admin',
+        loadChildren: './admin/admin.module#AdminModule',
     }
 
 ];
