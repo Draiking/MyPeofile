@@ -25,6 +25,10 @@ export class WorkingComponent implements OnInit {
                 ' яндекс карты, модальные окна, видео из ютуба', title: 'Стол и Стулья', subtitle: 'Сайт-1'},
         {id: 2, imgUrl: './assets/img/help.png', description: 'Второй проект сайта по магазину электро товаров. В проекте присутвует' +
                 ' каталог, фильтр, модальные окна, новости, корзина', title: 'Нева-электро', subtitle: 'Сайт-2'},
+        {id: 3, imgUrl: './assets/img/verstka4.png', description: 'Третий проект сайта по SEO. В проекте присутвует' +
+                ' форма обращения, карточки', title: 'Нева-электро', subtitle: 'Сайт-3'},
+        {id: 4, imgUrl: './assets/img/oil-code.png', description: 'Четвертый проект, приложение на ionic. В проекте присутвует' +
+                ' форма регистрации, модальное окно с обратной связью', title: 'Нева-электро', subtitle: 'Сайт-4'},
     ];
 
     constructor() {

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid detail-container">
     <div class="row">
         <div class="col-xl-12" *ngIf="post">
             <div class="date">{{post.date}}</div>
@@ -8,7 +8,7 @@
             <div class="subtitle"><h5>{{post.subtitle}}</h5></div>
             <div class="desc">{{post.description}}</div>
             <div class="img">{{post.imgUrl}}</div>
-            <button mat-raised-button color="primary" [routerLink]="['/blog/list']">К списку</button>
+            <button class="btn-detail" mat-raised-button color="primary" [routerLink]="['/blog/list']">К списку</button>
         </div>
     </div>
 </div>

@@ -26,6 +26,7 @@
       "type": "Angular",
       "title":"Angular",
       "subtitle": "ngFor",
+      "description": "Основная директива ngFor позволяет нам создавать списки и таблицы представления данных в наших HTML-шаблонах",
       "date": "10.07.2019  14:10:59"
     },
     {
@@ -33,13 +34,15 @@
       "type": "JavaScript",
       "title": "JavaScript",
       "subtitle": "JavaScript: if() else",
+      "description": "В Java оператор if может сопровождаться дополнительным оператором else, который выполняется при ложном логическое выражение.",
       "date": "10.07.2019  14:10:59"
     },
     {
       "id": 3,
       "type": "Angular",
       "title": "Angular from myAngular",
-      "subtitle": "[ngStyle], [ngClass]",
+      "subtitle": "[ngClass]",
+      "description": "Директива ngClass позволяет определить набор классов, которые будут применяться к элементу.",
       "date": "10.07.2019  14:10:59"
     }
   ]

@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import {authRoutes} from './auth-routing.module';
 import {AuthGuardService} from './auth-guard.service';
 import {AuthService} from './auth.service';
+import {MatButtonModule, MatInputModule} from '@angular/material';
 
 
 @NgModule({
@@ -19,6 +20,8 @@ import {AuthService} from './auth.service';
         CommonModule,
         FormsModule,
         RouterModule.forChild(authRoutes),
+        MatButtonModule,
+        MatInputModule,
 
     ],
     providers: [

@@ -1,10 +1,27 @@
 @import "~src/styles/commons/color";
 
+:host{
+  width: 100%;
+}
+
 .flex {
+  overflow: auto;
+  height: 100%;
 
   small {
     font-size: 13px;
     color: $text-about;
+  }
+
+  .border {
+    border-bottom: 1px solid $gray;
+  }
+
+  .news {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
   }
 
   .list-button {
